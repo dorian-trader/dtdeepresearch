@@ -1,0 +1,58 @@
+valuation paper on PPP/SIRRIPA
+https://download.ssrn.com/2025/7/3/5338179.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIF4ta1%2Fl7RRIw%2BTlMjcmcOswSjQWiinrP%2BXyupvMgG%2FHAiEAhCtt%2BHk1%2BXZl2rYA6Ohunko1Ij3XWhb4aZMK9jemhj0qxQUI%2FP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAEGgwzMDg0NzUzMDEyNTciDKHsRvpqhW9ZAL91oCqZBXRw%2F0RsRbQhf%2FXoJcaffIXIJ%2F4ljBsQi2xYhAFYfNpW9aJEKxvPZ1dWW4IFunoYR1UhKRrJLE%2F0baABKlpcp4sKNuiYiPOc5VG2d5qXe2gs%2BmuHzIFXcwzSDARe2F%2BP%2Fqq6Jnohym4vm95PSoBpaDRW6pBvSwShkKfC1q5%2BSPfF7KPb6NWNf8JE1magjiWJnjwQ39DhYXG%2ByyZs3UFhvv2MQc3QnOzpWO9RSyTPSeArQdsdEkZQm9ML6OvFu24RCDQtVh5CngwuO0c9dYXs3DyWrdlAsaFVztGtxmE%2FgTTs2BGgv93vIamWN%2FbvJOYpGGeBH%2BWnm4ylaIaf4egHiSeiup7E6xRmHhMxs6n2i7gLGN7mftvkVsPHvCxgO01mpM9ruSl%2FozZlbndiwPL4zPib3%2BN77OUaS5Ms7E1HxDUD%2BIHkPk5dkqVsDuGLF1NMhxb2fyZUsLhoUgWxkKPacAp%2B4DBsYlscFBfSW8LMETxGA2SjMwpRPzT9N3FOfYHGpyUaFcYTbGvDHUGeiJEev1SW%2BgmwLM3VwyZEBG%2Bbu19e8W9xnkUWVljNjaPXwGuXKaU0PCmWq%2BDVyNzcXLhEBrIfNmOV%2BYS%2BjWOBRCJFFJoI5cthrj%2B9agztDLERQbKCYtIPVQj3C0Ue9PN%2BP4LdfQz5a3anEG8p9XVOFF5txC4HKWD4Sgo5wTUy0eWXc7bN4A%2F0s4Ch6MeiGHV66TbrPjRc3wxoJC0oN5bDTetzPoI%2FcNGrzn1FEKLFfzpy%2BYvyJQCY%2FewzNQBDKoXkmNZSzLP1gGO4lADg8rcRfFaYxzY1%2BLyiydj9wI31QD3DQtRxOC7WNVYBmcrpX3vm4boc%2FxjB8Bx99PO6swHdHrWwKOyuIrh57tZqQ1d6MPejgcQGOrEBLRBMff%2Fyb69qjweixjlittxH1LKllFw2Ef%2FXr9iyfUPDNv0IsXmZfrhGjSFBkDAHDZxlzSAFKHZPiT4mQ4%2FRKt3PRle3G4i1evrOE5BrunIsjHeesxit8SaWfJ%2FEyrRDeles0Y0oviBFUVQekDZu%2Fy1XcfbVIVRwbnlzldX78e4zzAZda%2BMKmp1lxGw6ESVhgXDAiYPmikkVfm4EEAluHdp%2BXwE8uFfBbUhNfL4A52dy&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250723T035106Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAUPUUPRWETCX2S4CF%2F20250723%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=5be80f75e9fb8d2e901b4ee66ae20f221bcff5a9a5bfd83680edde4337ece15c&abstractId=5338179
+
+✅ Why these qualify for PPP/SIRRIPA modeling
+High growth / delayed profitability: Firms like Amazon, Tesla, and Snowflake operate with thin or negative margins for extended periods. Traditional P/E heavily undervalues such profiles, while PPP (as shown by Sam 2025) effectively handles these edge cases 
+rainsysam.com
+
+Option-like earnings: As explicitly tested alongside NVIDIA and Broadcom in Sam’s case studies 
+rainsysam.com
+, PPP generalizes well to any firm where future earnings drive present value disproportionately.
+
+Earnings growth misalignment: Companies such as Salesforce, Netflix, Snowflake, and PayPal still reinvest heavily, suppressing current earnings—perfect for a PPP framework over P/E or PEG 
+rainsysam.com
+
+The models aren’t limited to tech—any firm with delayed payback horizons (e.g., bio/pharma Moderna) or capital-intensive long-turnaround (e.g., Tesla) fits.
+
+could be used to value:
+
+Apple (AAPL)
+Microsoft (MSFT)
+Alphabet (GOOG/GOOGL)
+Amazon (AMZN)
+NVIDIA (NVDA)
+Tesla (TSLA)
+Meta Platforms (META)
+Berkshire Hathaway (BRK.B)
+UnitedHealth (UNH)
+Exxon Mobil (XOM)
+JPMorgan Chase (JPM)
+Johnson & Johnson (JNJ)
+Visa (V)
+Procter & Gamble (PG)
+Mastercard (MA)
+Walmart (WMT)
+Samsung Electronics (005930.KS)* – excluded if non-U.S.
+Adobe (ADBE)
+Home Depot (HD)
+Pfizer (PFE)
+Bank of America (BAC)
+Chevron (CVX)
+ASML Holding (ASML.US)
+Netflix (NFLX)
+Verizon (VZ)
+Comcast (CMCSA)
+PepsiCo (PEP)
+Cisco Systems (CSCO)
+Broadcom (AVGO)
+AbbVie (ABBV)
+Intel (INTC)
+Oracle (ORCL)
+Salesforce (CRM)
+Thermo Fisher (TMO)
+Eli Lilly (LLY)
+Merck (MRK)
+Moderna (MRNA)
+ServiceNow (NOW)
+Snowflake (SNOW)
+PayPal (PYPL)

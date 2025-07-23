@@ -1,0 +1,13 @@
+{
+  "name": "paper-utils",
+  "type": "module",
+  "main": "test.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.0.0"
+  }
+}
