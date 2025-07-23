@@ -1,34 +1,15 @@
 [
   {
-    "id": "paper1",
-    "title": "Valuing Subscription-Based Businesses",
-    "url": "https://example.com/subscription-valuation",
-    "categories": ["valuation", "subscription-models"],
-    "stocks": ["NFLX", "CRM", "AAPL"],
-    "published_date": "2019-03-12"
-  },
-  {
-    "id": "paper2",
-    "title": "Competitive Edge in the Tech Sector",
-    "url": "https://example.com/tech-competition",
-    "categories": ["competition", "moat"],
-    "stocks": ["GOOGL", "MSFT", "AAPL"],
-    "published_date": "2021-07-08"
-  },
-  {
-    "id": "paper3",
-    "title": "Reverse DCF for Growth Companies",
-    "url": "https://example.com/reverse-dcf",
-    "categories": ["valuation"],
-    "stocks": ["AMZN", "TSLA", "AAPL"],
-    "published_date": "2022-11-01"
-  },
-  {
-    "id": "paper4",
-    "title": "Moats in Enterprise SaaS",
-    "url": "https://example.com/saas-moats",
-    "categories": ["moat", "business-models"],
-    "stocks": ["CRM", "ADBE", "NOW"],
-    "published_date": "2020-05-15"
+    "id": "paper1-",
+    "title": "Resolving the Valuation Mystery of Palantir Technologies: How PPP and SIRRIPA Rationalize a Market Darling with a P/E Over 500",
+    "url": "https://papers.ssrn.com/sol3/Delivery.cfm/5338179.pdf?abstractid=5338179",
+    "categories": ["valuation", "high-growth", "fundamental-analysis"],
+    "stocks": [
+      "AAPL", "MSFT", "GOOG", "GOOGL", "AMZN", "NVDA", "TSLA", "META", "BRK.B",
+      "UNH", "XOM", "JPM", "JNJ", "V", "PG", "MA", "WMT", "ADBE", "HD", "PFE",
+      "BAC", "CVX", "ASML", "NFLX", "VZ", "CMCSA", "PEP", "CSCO", "AVGO", "ABBV",
+      "INTC", "ORCL", "CRM", "TMO", "LLY", "MRK", "MRNA", "NOW", "SNOW", "PYPL", "PLTR"
+    ],
+    "published_date": "2025-07-03"
   }
 ]
