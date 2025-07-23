@@ -11,5 +11,33 @@
       "INTC", "ORCL", "CRM", "TMO", "LLY", "MRK", "MRNA", "NOW", "SNOW", "PYPL", "PLTR"
     ],
     "published_date": "2025-07-03"
-  }
+  },
+  {
+    "id": "2",
+    "title": "Competitive advantage: A longitudinal analysis of the roles of data‑driven innovation capabilities, marketing agility, and market turbulence",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/1-s2.0-S0969698923002989-main.pdf",
+    "categories": ["competitive-advantage", "data-driven-innovation", "marketing-agility"],
+    "stocks": [
+      "PLTR", "AAPL", "MSFT", "AMZN", "GOOG", "META", "NFLX", "TSLA",
+      "NVDA", "ADBE", "CRM", "ORCL", "SNOW", "NOW", "CSCO", "SAP",
+      "IBM", "SHOP", "TWLO", "SQ", "ESTC", "BABA", "JD", "WMT", "HD",
+      "CMCSA", "TGT", "NKE", "SBUX", "DIS", "PEP", "KO", "MCD",
+      "CMG", "LVS", "MAR", "UBER", "LYFT"
+    ],
+    "published_date": "2023-08-30"
+  },
+  {
+    "id": "3",
+    "title": "Financial Performance and Innovation: Evidence From USA, 1998‑2023",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/2403.10982v1.pdf",
+    "categories": ["valuation", "innovation", "R&D-intensity", "fundamental-analysis"],
+    "stocks": [
+      "PLTR", "AAPL", "MSFT", "GOOG", "AMZN", "NVDA", "META", "CRM",
+      "ORCL", "IBM", "ADBE", "SAP", "CSCO", "INTC", "QCOM", "TXN", "AVGO",
+      "SNOW", "NOW", "SHOP", "TWLO", "ESTC", "NFLX", "TSLA", "MRNA",
+      "LLY", "PFE", "MRK", "ABBV", "JNJ", "GILD", "AMGN", "BMY", "TMO",
+      "ZTS", "DHR", "INTU", "UPS", "RTX", "HON"
+    ],
+    "published_date": "2024-03-16"
+  }  
 ]
