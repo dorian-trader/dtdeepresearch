@@ -1,0 +1,14 @@
+{
+  "name": "openai-test",
+  "version": "1.0.0",
+  "description": "Test script to verify OpenAI API key functionality",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "openai": "^4.28.0",
+    "dotenv": "^16.4.1"
+  },
+  "type": "module"
+} 
