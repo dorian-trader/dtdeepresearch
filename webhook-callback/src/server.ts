@@ -28,7 +28,7 @@ if (!fs.existsSync(logsDir)) {
 app.post('/webhook', async (req: Request, res: Response) => {
   try {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const filename = `webhook-data-${timestamp}.json`;
+    const filename = `${timestamp}-webhook-data.json`;
     const filepath = path.join(logsDir, filename);
 
     // Log the incoming request
@@ -76,7 +76,7 @@ app.post('/webhook', async (req: Request, res: Response) => {
         console.log("Response output:", output_text);
         
         // Save the response data separately
-        const responseFilename = `response-${response_id}-${timestamp}.json`;
+        const responseFilename = `${timestamp}-response-completed.json`;
         const responseFilepath = path.join(logsDir, responseFilename);
         fs.writeFileSync(responseFilepath, JSON.stringify({
           response_id,
@@ -88,6 +88,44 @@ app.post('/webhook', async (req: Request, res: Response) => {
         console.log(`Response data saved to: ${responseFilepath}`);
       } catch (responseError) {
         console.error('Error retrieving response:', responseError);
+      }
+    }
+
+    // Handle failed responses to get error details
+    if (event.type === "response.failed") {
+      const response_id = event.data.id;
+      console.log('Response failed for ID:', response_id);
+      
+      try {
+        const response = await client.responses.retrieve(response_id);
+        console.log("Failed response details:", JSON.stringify(response, null, 2));
+        
+        // Save the failed response data separately
+        const responseFilename = `${timestamp}-response-failed.json`;
+        const responseFilepath = path.join(logsDir, responseFilename);
+        fs.writeFileSync(responseFilepath, JSON.stringify({
+          response_id,
+          event_type: event.type,
+          full_response: response,
+          timestamp: new Date().toISOString()
+        }, null, 2));
+        
+        console.log(`Failed response data saved to: ${responseFilepath}`);
+      } catch (responseError) {
+        console.error('Error retrieving failed response:', responseError);
+        
+        // Save the error details
+        const errorFilename = `${timestamp}-response-failed-error.json`;
+        const errorFilepath = path.join(logsDir, errorFilename);
+        fs.writeFileSync(errorFilepath, JSON.stringify({
+          response_id,
+          event_type: event.type,
+          error: responseError instanceof Error ? responseError.message : String(responseError),
+          error_stack: responseError instanceof Error ? responseError.stack : undefined,
+          timestamp: new Date().toISOString()
+        }, null, 2));
+        
+        console.log(`Error details saved to: ${errorFilepath}`);
       }
     }
 
@@ -136,7 +174,8 @@ app.get('/', (req: Request, res: Response) => {
     endpoints: {
       'POST /webhook': 'Receive verified webhook data from OpenAI',
       'GET /health': 'Health check endpoint',
-      'GET /logs': 'List saved webhook data files'
+      'GET /logs': 'List saved webhook data files',
+      'GET /response/:responseId': 'Manually retrieve a response by ID'
     },
     instructions: [
       'Webhook endpoint verifies signatures using OPENAI_WEBHOOK_SECRET',
@@ -180,6 +219,41 @@ app.get('/logs', (req: Request, res: Response) => {
   }
 });
 
+// Endpoint to manually retrieve a response by ID
+app.get('/response/:responseId', async (req: Request, res: Response) => {
+  try {
+    const responseId = req.params.responseId;
+    console.log(`Manually retrieving response: ${responseId}`);
+    
+    const response = await client.responses.retrieve(responseId);
+    
+    // Save the retrieved response
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const filename = `${timestamp}-manual-response.json`;
+    const filepath = path.join(logsDir, filename);
+    
+    fs.writeFileSync(filepath, JSON.stringify({
+      response_id: responseId,
+      retrieved_at: new Date().toISOString(),
+      full_response: response
+    }, null, 2));
+    
+    res.json({
+      success: true,
+      response_id: responseId,
+      response: response,
+      saved_to: filename
+    });
+  } catch (error) {
+    console.error('Error retrieving response:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to retrieve response',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+});
+
 // Start the server
 const server = app.listen(PORT, () => {
   console.log(`🚀 OpenAI webhook callback server running on port ${PORT}`);
@@ -199,7 +273,7 @@ server.on('error', (error) => {
 
 // Handle process termination
 process.on('SIGINT', () => {
-  console.log('\n🛑 Shutting down server...');
+  console.log('🛑 Shutting down server...');
   server.close(() => {
     console.log('✅ Server closed');
     process.exit(0);
@@ -207,7 +281,7 @@ process.on('SIGINT', () => {
 });
 
 process.on('SIGTERM', () => {
-  console.log('\n🛑 Shutting down server...');
+  console.log('🛑 Shutting down server...');
   server.close(() => {
     console.log('✅ Server closed');
     process.exit(0);

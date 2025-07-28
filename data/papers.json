@@ -22,7 +22,7 @@
       "NVDA", "ADBE", "CRM", "ORCL", "SNOW", "NOW", "CSCO", "SAP",
       "IBM", "SHOP", "TWLO", "SQ", "ESTC", "BABA", "JD", "WMT", "HD",
       "CMCSA", "TGT", "NKE", "SBUX", "DIS", "PEP", "KO", "MCD",
-      "CMG", "LVS", "MAR", "UBER", "LYFT"
+      "CMG", "LVS", "MAR", "UBER", "LYFT", "PG", "CL", "HRL", "LANC", "ADM"
     ],
     "published_date": "2023-08-30"
   },
@@ -36,8 +36,21 @@
       "ORCL", "IBM", "ADBE", "SAP", "CSCO", "INTC", "QCOM", "TXN", "AVGO",
       "SNOW", "NOW", "SHOP", "TWLO", "ESTC", "NFLX", "TSLA", "MRNA",
       "LLY", "PFE", "MRK", "ABBV", "JNJ", "GILD", "AMGN", "BMY", "TMO",
-      "ZTS", "DHR", "INTU", "UPS", "RTX", "HON"
+      "ZTS", "DHR", "INTU", "UPS", "RTX", "HON", "PG", "KO", "PEP"
     ],
     "published_date": "2024-03-16"
-  }  
+  },
+  {
+    "id": "4",
+    "title": "A review of the Dividend Discount Model: from deterministic to stochastic models",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/2001.00465v1.pdf",
+    "categories": ["valuation", "dividend-discount-model", "fundamental-analysis"],
+    "stocks": [
+      "PG", "KO", "PEP", "CL", "TGT", "WMT", "HRL", "ADM", "LANC", "MO",
+      "GPC", "SWK", "ED", "AWR", "NWN", "EMR", "JNJ", "ABT", "BDX", "SYY",
+      "FRT", "DOV", "ITW", "APD", "RPM", "SHW", "MKC", "KMB", "XOM", "CVX",
+      "MMM", "UVV", "TR", "LEG", "PBCT", "PB", "NUE", "TROW", "TXN", "KO"
+    ],
+    "published_date": "2020-01-02"
+  }
 ]

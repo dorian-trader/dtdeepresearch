@@ -1,0 +1,15 @@
+{
+  "name": "stock-research-prompt",
+  "version": "1.0.0",
+  "description": "Generate prompts for fundamental stock research",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "openai": "^4.0.0",
+    "dotenv": "^16.0.0"
+  }
+} 
