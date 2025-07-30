@@ -52,5 +52,29 @@
       "MMM", "UVV", "TR", "LEG", "PBCT", "PB", "NUE", "TROW", "TXN", "KO"
     ],
     "published_date": "2020-01-02"
+  },
+  {
+    "id": "5",
+    "title": "Investment Analysis: Evidence on the Healthcare Industry",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/Investment_Analysis_Evidence_on_the_Healthcare_Ind.pdf",
+    "categories": ["valuation", "comparative-valuation", "healthcare-sector"],
+    "stocks": [
+      "UNH", "CI", "HUM", "UHS", "CVS", "PFE", "MRK", "ABBV", "GILD", "AMGN",
+      "DHR", "BDX", "JNJ", "MDT", "LLY", "BSX", "SYK", "ZBH", "ANTM", "CI",
+      "HCA", "ABC", "CVS", "CNC", "CIEN"
+    ],
+    "published_date": "2025-01-15"
+  },
+  {
+    "id": "6",
+    "title": "Market Valuation Analysis of Selected Companies in the Healthcare Industry",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/Market_Valuation_Analysis_of_Selected_Companies_in.pdf",
+    "categories": ["valuation", "financial-ratios", "market-valuation", "competitive-analysis"],
+    "stocks": [
+      "UNH", "CVS", "PFE", "MRK", "HUM", "CI", "UHS", "ABBV", "GILD", "AMGN",
+      "JNJ", "DHR", "CVS", "HCA", "MDT", "SYK", "BSX", "CI", "CNC", "ABC",
+      "ZBH", "BDX", "ANTM", "CI"
+    ],
+    "published_date": "2024-10-10"
   }
 ]

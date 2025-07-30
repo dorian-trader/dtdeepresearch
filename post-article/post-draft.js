@@ -3,6 +3,7 @@ import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 // Get the directory of the current file
 const __filename = fileURLToPath(import.meta.url);
@@ -17,6 +18,18 @@ const appPassword = process.env.APP_PASSWORD || 'todo';
 const auth = Buffer.from(`${username}:${appPassword}`).toString('base64');
 
 const postDraft = async () => {
+  // Read content from HTML file
+  const htmlFilePath = path.join(__dirname, 'WMT-o3deepresearch-01.md');
+  let content = '';
+  
+  try {
+    content = fs.readFileSync(htmlFilePath, 'utf8');
+  } catch (error) {
+    console.error(`Error reading HTML file: ${error.message}`);
+    console.log('Please create a file named "content.html" in the post-article directory');
+    return;
+  }
+
   const res = await fetch(`${site}/wp-json/wp/v2/posts`, {
     method: 'POST',
     headers: {
@@ -24,8 +37,8 @@ const postDraft = async () => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      title: 'David\s draft article from the API 2',
-      content: 'This is the content of your draft post.',
+      title: 'Walmart (WMT) Deep Research',
+      content: content,
       status: 'draft',
     }),
   });

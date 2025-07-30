@@ -70,11 +70,11 @@ async function sendToDeepResearch(prompt) {
         
         const response = await openai.responses.create({
             model: "o3-deep-research",
+            //model: "o4-mini-deep-research",
             input: prompt,
             background: true,
             tools: [
                 { type: "web_search_preview" },
-                { type: "code_interpreter", container: { type: "auto" } },
             ],
         });
         
@@ -95,8 +95,8 @@ async function main() {
     const papers = await loadPapers();
     console.log(`Loaded ${papers.length} research papers`);
     
-    // TEMPORARY: Hardcode PLTR for testing
-    const selectedStock = 'PLTR';
+    // TEMPORARY: Hardcode AMZN for testing
+    const selectedStock = 'AMZN';
     console.log(`\nSelected stock: ${selectedStock} (hardcoded for testing)`);
     
     const relatedPapers = getPapersForStock(papers, selectedStock);
