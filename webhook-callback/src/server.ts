@@ -175,7 +175,8 @@ app.get('/', (req: Request, res: Response) => {
       'POST /webhook': 'Receive verified webhook data from OpenAI',
       'GET /health': 'Health check endpoint',
       'GET /logs': 'List saved webhook data files',
-      'GET /response/:responseId': 'Manually retrieve a response by ID'
+      'GET /response/:responseId': 'Manually retrieve a response by ID',
+      'POST /response/:responseId/cancel': 'Cancel a response by ID'
     },
     instructions: [
       'Webhook endpoint verifies signatures using OPENAI_WEBHOOK_SECRET',
@@ -227,6 +228,10 @@ app.get('/response/:responseId', async (req: Request, res: Response) => {
     
     const response = await client.responses.retrieve(responseId);
     
+    // Retrieve input items for this response
+    const inputItems = await client.responses.inputItems.list(responseId);
+    console.log(`Retrieved ${inputItems.data.length} input items for response: ${responseId}`);
+    
     // Save the retrieved response
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const filename = `${timestamp}-manual-response.json`;
@@ -238,17 +243,71 @@ app.get('/response/:responseId', async (req: Request, res: Response) => {
       full_response: response
     }, null, 2));
     
+    // Save the input items to a separate log file
+    const inputItemsFilename = `${timestamp}-input-items.json`;
+    const inputItemsFilepath = path.join(logsDir, inputItemsFilename);
+    
+    fs.writeFileSync(inputItemsFilepath, JSON.stringify({
+      response_id: responseId,
+      retrieved_at: new Date().toISOString(),
+      input_items: inputItems.data,
+      input_items_count: inputItems.data.length,
+      has_more: inputItems.has_more
+    }, null, 2));
+    
+    console.log(`Input items saved to: ${inputItemsFilepath}`);
+    
     res.json({
       success: true,
       response_id: responseId,
       response: response,
-      saved_to: filename
+      input_items: inputItems.data,
+      input_items_count: inputItems.data.length,
+      saved_to: filename,
+      input_items_saved_to: inputItemsFilename
     });
   } catch (error) {
     console.error('Error retrieving response:', error);
     res.status(500).json({
       success: false,
       error: 'Failed to retrieve response',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+});
+
+// Endpoint to cancel a response by ID
+app.post('/response/:responseId/cancel', async (req: Request, res: Response) => {
+  try {
+    const responseId = req.params.responseId;
+    console.log(`Cancelling response: ${responseId}`);
+    
+    await client.responses.cancel(responseId);
+    
+    // Save the cancellation action to a log file
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const filename = `${timestamp}-response-cancelled.json`;
+    const filepath = path.join(logsDir, filename);
+    
+    fs.writeFileSync(filepath, JSON.stringify({
+      response_id: responseId,
+      cancelled_at: new Date().toISOString(),
+      action: 'cancelled'
+    }, null, 2));
+    
+    console.log(`Response cancellation logged to: ${filepath}`);
+    
+    res.json({
+      success: true,
+      response_id: responseId,
+      message: 'Response cancelled successfully',
+      saved_to: filename
+    });
+  } catch (error) {
+    console.error('Error cancelling response:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to cancel response',
       message: error instanceof Error ? error.message : 'Unknown error'
     });
   }

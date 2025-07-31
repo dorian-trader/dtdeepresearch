@@ -95,8 +95,8 @@ async function main() {
     const papers = await loadPapers();
     console.log(`Loaded ${papers.length} research papers`);
     
-    // TEMPORARY: Hardcode AMZN for testing
-    const selectedStock = 'AMZN';
+    // TEMPORARY: Hardcode UNH for testing
+    const selectedStock = 'UNH';
     console.log(`\nSelected stock: ${selectedStock} (hardcoded for testing)`);
     
     const relatedPapers = getPapersForStock(papers, selectedStock);

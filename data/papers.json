@@ -76,5 +76,59 @@
       "ZBH", "BDX", "ANTM", "CI"
     ],
     "published_date": "2024-10-10"
+  },
+  {
+    "id": "7",
+    "title": "Valuing Financial Service Firms",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/finfirm09.pdf",
+    "categories": ["valuation", "bank-valuation", "price-to-book", "dividend-approach"],
+    "stocks": [
+      "JPM", "BAC", "C", "WFC", "GS", "MS", "USB", "PNC", "TD", "SCHW",
+      "AXP", "BLK", "SPGI", "AIG", "MET", "CME", "ICE", "BK", "STT",
+      "CB", "ZION", "FITB", "HBAN", "KEY", "CFG", "COF", "MTB", "FRC",
+      "TFC", "RF", "PNW", "WELL"
+    ],
+    "published_date": "2024-05-10"
+  },
+  {
+    "id": "8",
+    "title": "Competitive Advantage of Banking Industry in the Digital Age: A Bibliometric Approach",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/Competitive_Advantage_of_Banking_Industry_in_the_D.pdf",
+    "categories": ["competitive-advantage", "digital-transformation", "organizational-agility", "banking"],
+    "stocks": [
+      "JPM", "BAC", "C", "WFC", "GS", "MS", "USB", "PNC", "TD", "SCHW",
+      "AXP", "BLK", "SPGI", "AIG", "MET", "CME", "ICE", "BK", "STT",
+      "CB", "ZION", "FITB", "HBAN", "KEY", "CFG", "COF", "MTB", "FRC",
+      "TFC", "RF", "PNW", "WELL"
+    ],
+    "published_date": "2025-02-15"
+  },
+  {
+    "id": "9",
+    "title": "ESG Risks and Market Valuations: Evidence from the Energy Sector",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/ijfs-13-00113-v2.pdf",
+    "categories": ["valuation", "ESG-valuation", "risk-based-valuation"],
+    "stocks": [
+      "XOM", "CVX", "BP", "TOT", "COP", "SLB", "EOG", "MPC",
+      "PSX", "VLO", "KMI", "ENB", "CNQ", "PBR", "HAL", "OXY",
+      "EQNR", "SU", "HES", "DVN", "PXD", "APA", "EQT", "FANG",
+      "MRO", "CHK", "XEL", "PNW", "ONEOK", "PSXP", "WMB", "WES",
+      "TRP", "CVE", "SPGI", "CVE"
+    ],
+    "published_date": "2025-06-18"
+  },
+  {
+    "id": "10",
+    "title": "Competitiveness and Competitive Advantages of Enterprises in the Energy Sector",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/Competitiveness_and_Competitive_Advantages_of_Ente.pdf",
+    "categories": ["competitive-advantage", "resource-based-view", "strategy"],
+    "stocks": [
+      "XOM", "CVX", "BP", "TOT", "COP", "SLB", "EOG", "MPC",
+      "PSX", "VLO", "KMI", "ENB", "CNQ", "PBR", "HAL", "OXY",
+      "EQNR", "SU", "HES", "DVN", "PXD", "APA", "EQT", "FANG",
+      "MRO", "CHK", "XEL", "PNW", "ONEOK", "PSXP", "WMB", "WES",
+      "TRP", "CVE", "SPGI", "CVE"
+    ],
+    "published_date": "2018-09-01"
   }
 ]

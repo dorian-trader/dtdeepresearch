@@ -1,7 +1,10 @@
 Introduction:
 
 Perform a detailed deep research analysis for {{STOCK_SYMBOL}}. The analysis will follow a multi-step process based on 
-fundamental research and academic insights. It will cover the following areas:
+fundamental research and academic insights. Return no more than 14,000 tokens. Stop early if needed. 
+If the content exceeds this length, summarize remaining material rather than expanding further.
+
+It will cover the following areas:
 
 Company overview and strategy
 
@@ -139,6 +142,7 @@ Should you consider buying, selling, or holding the stock? If not, what could ch
 
 Finally, provide actionable insights on options trades, short-term, mid-term, and long-term investment strategies, 
 and specific recommendations on when to buy or sell, if applicable.
-The target audience is options traders who are familiar with iron condors, verticals, earnings plays, and other options strategies.
+The target audience is options traders who are familiar with:
+iron condors, verticals, earnings plays, and wheel strategies, but any options strategy would be appropriate.
 This doesn't mean you should always provide those strategies, but if there is a good opportunity, you should describe the strategy 
 and the potential rewards and risks. 
