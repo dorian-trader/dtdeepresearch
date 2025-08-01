@@ -1,25 +1,22 @@
 Introduction:
 
-Perform a detailed deep research analysis for {{STOCK_SYMBOL}}. The analysis will follow a multi-step process based on 
-fundamental research and academic insights. Return no more than 14,000 tokens. Stop early if needed. 
+Perform a detailed deep research analysis for {{STOCK_SYMBOL}}.
+The analysis will follow a multi-step process based on fundamental research and academic insights.
+You must use current pricing data when recommending any kind of trade action.
+You are doing fundamental research and will use historical data, but trade recommendations must be current.
+
+Return no more than 14,000 tokens. Stop early if needed. 
 If the content exceeds this length, summarize remaining material rather than expanding further.
 
 It will cover the following areas:
 
-Company overview and strategy
-
-Industry and market opportunities
-
-Competitive advantage (moat) analysis
-
-Financial analysis and performance
-
-Growth and future outlook
-
-Valuation analysis
-
-Technical analysis and market positioning
-
+Company overview and strategy,
+Industry and market opportunities,
+Competitive advantage (moat) analysis,
+Financial analysis and performance,
+Growth and future outlook,
+Valuation analysis,
+Technical analysis and market positioning,
 Final research conclusion and recommendations
 
 This research should also incorporate the following academic papers:
@@ -37,14 +34,10 @@ Step 1: Get Your Bearings and Your Data
 
 Start by gathering the following key documents for {{STOCK_SYMBOL}}:
 
-Latest 10-K (or 20-F) filing
-
-Latest 10-Q filing
-
-Earnings slides and call transcripts
-
-Investor day presentations or shareholder letters
-
+Latest 10-K (or 20-F) filing,
+Latest 10-Q filing,
+Earnings slides and call transcripts,
+Investor day presentations or shareholder letters,
 Research reports from banks or independent analysts
 
 Use https://www.sec.gov/edgar/search/, the company's investor relations webpage, or websites like httpS://seekingalpha.com if necessary.
@@ -58,11 +51,8 @@ Step 2: Business Model, Competitive Advantage, and Market Opportunity
 Next, examine {{STOCK_SYMBOL}}'s business model:
 
 What products or services does the company provide?
-
 How does it make money?
-
 Who are its primary customers?
-
 What is its competitive advantage (or moat)?
 
 For each of these questions, use {{PAPER1_TITLE}} and {{PAPER2_TITLE}} to assess the company's market positioning, 
@@ -72,19 +62,15 @@ scalability, brand strength, and other key competitive factors.
 Industry Insight:
 
 What is the size of the market it operates in?
-
 What are the key growth drivers and risks for the industry?
-
 Is there an opportunity for expansion, or is the market saturated?
 
 Step 3: Financial Analysis – Growth, Quality, and Efficiency
 
 Analyze {{STOCK_SYMBOL}}'s financials using the most recent filings and key metrics:
 
-Revenue growth, profitability, and margins
-
-Free cash flow and capital expenditures
-
+Revenue growth, profitability, margins,
+Free cash flow and capital expenditures,
 Return on invested capital (ROIC)
 
 Use {{PAPER1_TITLE}} and {{PAPER2_TITLE}} to assess whether the company's financial metrics align with industry 
@@ -98,9 +84,7 @@ Step 4: Mapping the Future with Scenarios
 Leverage AI tools like Fiscal.ai to create scenarios based on the current business and industry outlook. Consider:
 
 What is the growth trajectory of {{STOCK_SYMBOL}}?
-
 How will market trends and strategic decisions affect the company's future performance?
-
 What are the key risks and potential catalysts for the stock?
 
 Build a spreadsheet to test scenarios based on key drivers such as user growth, margins, and revenue. 
@@ -121,11 +105,9 @@ Step 6: Technical Analysis – Stock Chart and Market Positioning
 
 Review {{STOCK_SYMBOL}}'s technical chart:
 
-Identify trends, support and resistance levels
-
-Examine indicators such as moving averages, RSI, and MACD
-
-Check institutional ownership, short float, and insider trading activity
+Identify trends, support and resistance levels.
+Examine indicators such as moving averages, RSI, and MACD.
+Check institutional ownership, short float, and insider trading activity.
 
 Use {{PAPER1_TITLE}} and {{PAPER2_TITLE}} to identify whether technical indicators align with the fundamental analysis. 
 Evaluate whether the stock price trends are consistent with the long-term strategy or if there is market disconnect.
@@ -135,13 +117,12 @@ Step 7: Final Research Conclusion and Recommendations
 Synthesize the findings from all the previous steps to form a comprehensive conclusion on {{STOCK_SYMBOL}}:
 
 What are the stock's strengths, risks, and opportunities?
-
 Does the stock meet your investment criteria?
-
 Should you consider buying, selling, or holding the stock? If not, what could change your mind?
 
 Finally, provide actionable insights on options trades, short-term, mid-term, and long-term investment strategies, 
 and specific recommendations on when to buy or sell, if applicable.
+You must use current pricing data when recommending these actionable insights.
 The target audience is options traders who are familiar with:
 iron condors, verticals, earnings plays, and wheel strategies, but any options strategy would be appropriate.
 This doesn't mean you should always provide those strategies, but if there is a good opportunity, you should describe the strategy 
