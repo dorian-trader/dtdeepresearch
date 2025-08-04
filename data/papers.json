@@ -130,5 +130,19 @@
       "TRP", "CVE", "SPGI", "CVE"
     ],
     "published_date": "2018-09-01"
+  },
+  {
+    "id": "11",
+    "title": "A Data Valuation Model to Estimate the Investment Value of Platform Companies: Based on Discounted Cash Flow",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/A_Data_Valuation_Model_to_Estimate_the_Investment_.pdf",
+    "categories": ["valuation", "platform-economics", "DCF"],
+    "stocks": [
+      "UBER", "LYFT", "ABNB", "DASH", "AMZN", "GOOG", "META", "MSFT",
+      "AAPL", "NFLX", "SHOP", "CRM", "SQ", "PYPL", "BKNG", "EBAY",
+      "SPOT", "DDOG", "SNOW", "TWLO", "ZM", "ROKU", "DOCU", "ETSY",
+      "BIDU", "GRUB", "SE", "MELI", "GLBE", "NET", "COIN", "DUOL",
+      "ASAN", "UPST", "HOOD", "AFRM", "ZI", "FVRR", "WIX", "PINS"
+    ],
+    "published_date": "2023-06-11"
   }
 ]

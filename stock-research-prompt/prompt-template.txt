@@ -2,8 +2,7 @@ Introduction:
 
 Perform a detailed deep research analysis for {{STOCK_SYMBOL}}.
 The analysis will follow a multi-step process based on fundamental research and academic insights.
-You must use current pricing data when recommending any kind of trade action.
-You are doing fundamental research and will use historical data, but trade recommendations must be current.
+You must use current pricing data when discussing trade strategies.
 
 Return no more than 14,000 tokens. Stop early if needed. 
 If the content exceeds this length, summarize remaining material rather than expanding further.
