@@ -144,5 +144,19 @@
       "ASAN", "UPST", "HOOD", "AFRM", "ZI", "FVRR", "WIX", "PINS"
     ],
     "published_date": "2023-06-11"
-  }
+  },
+  {
+    "id": "12",
+    "title": "The Semiconductor Sector by Value Chain Segment: Analysis of Competitiveness and Policy Directions",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/ssrn-4315629.pdf",
+    "categories": ["competitive-advantage", "value-chain-analysis", "industry-structure"],
+    "stocks": [
+      "AVGO", "NVDA", "INTC", "AMD", "QCOM", "TXN", "IBM", "ASML",
+      "TSM", "NXPI", "IFNNY", "STM", "ALU", "MU", "MCHP", "ON",
+      "ADI", "KLAC", "LRCX", "IMTMY", "MTSI", "SWKS", "AMKR", "APH",
+      "SMCI", "AMAT", "INFN", "MXIM", "CY", "BRKR", "LITE", "SNDL",
+      "IXYS", "SU", "SDCC", "COHR", "NVMI", "TTMI", "TER"
+    ],
+    "published_date": "2022-10-28"
+  }  
 ]
