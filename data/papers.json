@@ -3,7 +3,7 @@
     "id": "1",
     "title": "Resolving the Valuation Mystery of Palantir Technologies: How PPP and SIRRIPA Rationalize a Market Darling with a P/E Over 500",
     "url": "https://dorian-trader.github.io/dtdeepresearch/ssrn-5338179.pdf",
-    "categories": ["valuation", "high-growth", "fundamental-analysis"],
+    "categories": ["valuation"],
     "stocks": [
       "AAPL", "MSFT", "GOOG", "GOOGL", "AMZN", "NVDA", "TSLA", "META", "BRK.B",
       "UNH", "XOM", "JPM", "JNJ", "V", "PG", "MA", "WMT", "ADBE", "HD", "PFE",
@@ -16,7 +16,7 @@
     "id": "2",
     "title": "Competitive advantage: A longitudinal analysis of the roles of data‑driven innovation capabilities, marketing agility, and market turbulence",
     "url": "https://dorian-trader.github.io/dtdeepresearch/1-s2.0-S0969698923002989-main.pdf",
-    "categories": ["competitive-advantage", "data-driven-innovation", "marketing-agility"],
+    "categories": ["competitive-advantage"],
     "stocks": [
       "PLTR", "AAPL", "MSFT", "AMZN", "GOOG", "META", "NFLX", "TSLA",
       "NVDA", "ADBE", "CRM", "ORCL", "SNOW", "NOW", "CSCO", "SAP",
@@ -30,7 +30,7 @@
     "id": "3",
     "title": "Financial Performance and Innovation: Evidence From USA, 1998‑2023",
     "url": "https://dorian-trader.github.io/dtdeepresearch/2403.10982v1.pdf",
-    "categories": ["valuation", "innovation", "R&D-intensity", "fundamental-analysis"],
+    "categories": ["valuation"],
     "stocks": [
       "PLTR", "AAPL", "MSFT", "GOOG", "AMZN", "NVDA", "META", "CRM",
       "ORCL", "IBM", "ADBE", "SAP", "CSCO", "INTC", "QCOM", "TXN", "AVGO",
@@ -44,7 +44,7 @@
     "id": "4",
     "title": "A review of the Dividend Discount Model: from deterministic to stochastic models",
     "url": "https://dorian-trader.github.io/dtdeepresearch/2001.00465v1.pdf",
-    "categories": ["valuation", "dividend-discount-model", "fundamental-analysis"],
+    "categories": ["valuation"],
     "stocks": [
       "PG", "KO", "PEP", "CL", "TGT", "WMT", "HRL", "ADM", "LANC", "MO",
       "GPC", "SWK", "ED", "AWR", "NWN", "EMR", "JNJ", "ABT", "BDX", "SYY",
@@ -57,7 +57,7 @@
     "id": "5",
     "title": "Investment Analysis: Evidence on the Healthcare Industry",
     "url": "https://dorian-trader.github.io/dtdeepresearch/Investment_Analysis_Evidence_on_the_Healthcare_Ind.pdf",
-    "categories": ["valuation", "comparative-valuation", "healthcare-sector"],
+    "categories": ["valuation"],
     "stocks": [
       "UNH", "CI", "HUM", "UHS", "CVS", "PFE", "MRK", "ABBV", "GILD", "AMGN",
       "DHR", "BDX", "JNJ", "MDT", "LLY", "BSX", "SYK", "ZBH", "ANTM", "CI",
@@ -69,7 +69,7 @@
     "id": "6",
     "title": "Market Valuation Analysis of Selected Companies in the Healthcare Industry",
     "url": "https://dorian-trader.github.io/dtdeepresearch/Market_Valuation_Analysis_of_Selected_Companies_in.pdf",
-    "categories": ["valuation", "financial-ratios", "market-valuation", "competitive-analysis"],
+    "categories": ["valuation"],
     "stocks": [
       "UNH", "CVS", "PFE", "MRK", "HUM", "CI", "UHS", "ABBV", "GILD", "AMGN",
       "JNJ", "DHR", "CVS", "HCA", "MDT", "SYK", "BSX", "CI", "CNC", "ABC",
@@ -81,7 +81,7 @@
     "id": "7",
     "title": "Valuing Financial Service Firms",
     "url": "https://dorian-trader.github.io/dtdeepresearch/finfirm09.pdf",
-    "categories": ["valuation", "bank-valuation", "price-to-book", "dividend-approach"],
+    "categories": ["valuation"],
     "stocks": [
       "JPM", "BAC", "C", "WFC", "GS", "MS", "USB", "PNC", "TD", "SCHW",
       "AXP", "BLK", "SPGI", "AIG", "MET", "CME", "ICE", "BK", "STT",
@@ -94,7 +94,7 @@
     "id": "8",
     "title": "Competitive Advantage of Banking Industry in the Digital Age: A Bibliometric Approach",
     "url": "https://dorian-trader.github.io/dtdeepresearch/Competitive_Advantage_of_Banking_Industry_in_the_D.pdf",
-    "categories": ["competitive-advantage", "digital-transformation", "organizational-agility", "banking"],
+    "categories": ["competitive-advantage"],
     "stocks": [
       "JPM", "BAC", "C", "WFC", "GS", "MS", "USB", "PNC", "TD", "SCHW",
       "AXP", "BLK", "SPGI", "AIG", "MET", "CME", "ICE", "BK", "STT",
@@ -107,7 +107,7 @@
     "id": "9",
     "title": "ESG Risks and Market Valuations: Evidence from the Energy Sector",
     "url": "https://dorian-trader.github.io/dtdeepresearch/ijfs-13-00113-v2.pdf",
-    "categories": ["valuation", "ESG-valuation", "risk-based-valuation"],
+    "categories": ["valuation"],
     "stocks": [
       "XOM", "CVX", "BP", "TOT", "COP", "SLB", "EOG", "MPC",
       "PSX", "VLO", "KMI", "ENB", "CNQ", "PBR", "HAL", "OXY",
@@ -121,7 +121,7 @@
     "id": "10",
     "title": "Competitiveness and Competitive Advantages of Enterprises in the Energy Sector",
     "url": "https://dorian-trader.github.io/dtdeepresearch/Competitiveness_and_Competitive_Advantages_of_Ente.pdf",
-    "categories": ["competitive-advantage", "resource-based-view", "strategy"],
+    "categories": ["competitive-advantage"],
     "stocks": [
       "XOM", "CVX", "BP", "TOT", "COP", "SLB", "EOG", "MPC",
       "PSX", "VLO", "KMI", "ENB", "CNQ", "PBR", "HAL", "OXY",
@@ -135,7 +135,7 @@
     "id": "11",
     "title": "A Data Valuation Model to Estimate the Investment Value of Platform Companies: Based on Discounted Cash Flow",
     "url": "https://dorian-trader.github.io/dtdeepresearch/A_Data_Valuation_Model_to_Estimate_the_Investment_.pdf",
-    "categories": ["valuation", "platform-economics", "DCF"],
+    "categories": ["valuation"],
     "stocks": [
       "UBER", "LYFT", "ABNB", "DASH", "AMZN", "GOOG", "META", "MSFT",
       "AAPL", "NFLX", "SHOP", "CRM", "SQ", "PYPL", "BKNG", "EBAY",
@@ -149,7 +149,7 @@
     "id": "12",
     "title": "The Semiconductor Sector by Value Chain Segment: Analysis of Competitiveness and Policy Directions",
     "url": "https://dorian-trader.github.io/dtdeepresearch/ssrn-4315629.pdf",
-    "categories": ["competitive-advantage", "value-chain-analysis", "industry-structure"],
+    "categories": ["competitive-advantage"],
     "stocks": [
       "AVGO", "NVDA", "INTC", "AMD", "QCOM", "TXN", "IBM", "ASML",
       "TSM", "NXPI", "IFNNY", "STM", "ALU", "MU", "MCHP", "ON",
