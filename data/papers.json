@@ -158,5 +158,39 @@
       "IXYS", "SU", "SDCC", "COHR", "NVMI", "TTMI", "TER"
     ],
     "published_date": "2022-10-28"
+  },
+  {
+    "id": "13",
+    "title": "Leases, Debt and Value",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/newlease.pdf",
+    "categories": ["valuation"],
+    "stocks": [
+      "TGT", "TJX", "DLTR", "DG", "ULTA",
+      "WMT", "COST", "AMZN", "HD", "LOW",
+      "BBY", "ROST", "BURL", "FIVE", "OLLI",
+      "M", "KSS", "JWN", "DKS", "ASO",
+      "AEO", "ANF", "GPS", "URBN", "LULU",
+      "NKE", "TPR", "CPRI", "PVH", "RL",
+      "ETSY", "W", "CHWY", "IDEXY", "HNNMY",
+      "BABA", "JD", "MELI", "SE", "BIRK"
+    ],
+    "published_date": "2009-01-01"
+  },
+  {
+    "id": "14",
+    "title": "Private Label Positioning and Product Line",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/wp_tse_816.pdf",
+    "categories": ["competitive-advantage"],
+    "stocks": [
+      "TGT", "TJX", "DLTR", "DG", "ULTA",
+      "WMT", "COST", "AMZN", "HD", "LOW",
+      "BBY", "ROST", "BURL", "FIVE", "OLLI",
+      "M", "KSS", "JWN", "DKS", "ASO",
+      "AEO", "ANF", "GPS", "URBN", "LULU",
+      "NKE", "TPR", "CPRI", "PVH", "RL",
+      "ETSY", "W", "CHWY", "IDEXY", "HNNMY",
+      "BABA", "JD", "MELI", "SE", "BIRK"
+    ],
+    "published_date": "2017-05-29"
   }  
 ]
