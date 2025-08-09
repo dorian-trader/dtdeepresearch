@@ -1,3 +1,4 @@
 node_modules
 .env
 webhook-callback/logs
+webhook-callback/parsed-content

@@ -53,7 +53,7 @@ function generateResearchPrompt(stock, paper1, paper2) {
 }
 
 // Send the prompt to ChatGPT Deep Research
-async function sendToDeepResearch(prompt) {
+async function sendToDeepResearch(prompt, metadata) {
     try {
         console.log('\nSending to ChatGPT Deep Research...');
         
@@ -62,6 +62,7 @@ async function sendToDeepResearch(prompt) {
             //model: "o4-mini-deep-research",
             input: prompt,
             background: true,
+            metadata,
             tools: [
                 { type: "web_search_preview" },
             ],
@@ -237,7 +238,7 @@ async function main() {
     console.log('='.repeat(80));
     
     // Send to ChatGPT Deep Research
-    await sendToDeepResearch(prompt);
+    await sendToDeepResearch(prompt, { "stock": selectedStock });
 }
 
 // Run the program

@@ -24,6 +24,100 @@ if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir, { recursive: true });
 }
 
+// Create parsed content directory if it doesn't exist
+const parsedContentDir = path.join(__dirname, '..', 'parsed-content');
+if (!fs.existsSync(parsedContentDir)) {
+  fs.mkdirSync(parsedContentDir, { recursive: true });
+}
+
+// Function to extract output_text from manual response messages
+function extractOutputText(responseData: any): string | null {
+  try {
+    if (!responseData.full_response || !responseData.full_response.output) {
+      return null;
+    }
+
+    const output = responseData.full_response.output;
+    let outputText = '';
+
+    // Find all message items with output_text content
+    for (const item of output) {
+      if (item.type === 'message' && item.content) {
+        for (const contentItem of item.content) {
+          if (contentItem.type === 'output_text' && contentItem.text) {
+            outputText += contentItem.text;
+          }
+        }
+      }
+    }
+
+    return outputText || null;
+  } catch (error) {
+    console.error('Error extracting output text:', error);
+    return null;
+  }
+}
+
+// Function to format text: replace "\n\n" with two carriage returns, then "\n" with one
+function formatText(text: string): string {
+  return text
+    .replace(/\n\n/g, '\r\r')
+    .replace(/\n/g, '\r');
+}
+
+// Function to generate unique filename with stock symbol and padded number
+function generateUniqueFilename(stockSymbol: string): string {
+  let counter = 1;
+  let filename = `${stockSymbol}-o3deepresearch-${counter.toString().padStart(2, '0')}.md`;
+  
+  while (fs.existsSync(path.join(parsedContentDir, filename))) {
+    counter++;
+    filename = `${stockSymbol}-o3deepresearch-${counter.toString().padStart(2, '0')}.md`;
+  }
+  
+  return filename;
+}
+
+// Function to extract stock symbol from metadata or text
+function extractStockSymbol(responseData: any, text: string): string {
+  // First try to get stock symbol from metadata
+  if (responseData.full_response && 
+      responseData.full_response.metadata && 
+      responseData.full_response.metadata.stock) {
+    return responseData.full_response.metadata.stock;
+  }
+
+  // Default to 'UNKNOWN' if no symbol found
+  return 'UNKNOWN';
+}
+
+// Function to parse manual response and save to file
+function parseManualResponse(responseData: any): { success: boolean; filename?: string; error?: string } {
+  try {
+    const outputText = extractOutputText(responseData);
+    
+    if (!outputText) {
+      return { success: false, error: 'No output_text found in response' };
+    }
+
+    const formattedText = formatText(outputText);
+    const stockSymbol = extractStockSymbol(responseData, outputText);
+    const filename = generateUniqueFilename(stockSymbol);
+    const filepath = path.join(parsedContentDir, filename);
+
+    fs.writeFileSync(filepath, formattedText);
+    
+    console.log(`Parsed content saved to: ${filepath}`);
+    return { success: true, filename };
+  } catch (error) {
+    console.error('Error parsing manual response:', error);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Unknown error' 
+    };
+  }
+}
+
 // Webhook endpoint to receive data from OpenAI
 app.post('/webhook', async (req: Request, res: Response) => {
   try {
@@ -176,14 +270,22 @@ app.get('/', (req: Request, res: Response) => {
       'GET /health': 'Health check endpoint',
       'GET /logs': 'List saved webhook data files',
       'GET /response/:responseId': 'Manually retrieve a response by ID',
-      'POST /response/:responseId/cancel': 'Cancel a response by ID'
+      'POST /response/:responseId/cancel': 'Cancel a response by ID',
+      'POST /parse-log/:filename': 'Parse existing log file and extract content'
     },
     instructions: [
       'Webhook endpoint verifies signatures using OPENAI_WEBHOOK_SECRET',
       'All received data will be saved to the logs directory',
       'Response.completed events will retrieve and save full response data',
+      'Manual response retrieval will automatically parse and save content',
+      'Use /parse-log/:filename to test parsing on existing log files',
+      'Parsed content is saved to parsed-content directory with format: {symbol}-o3deepresearch-{number}.md',
       'Check the console for real-time logs of incoming requests'
     ],
+    directories: {
+      logs: logsDir,
+      parsed_content: parsedContentDir
+    },
     environment: {
       webhook_secret_configured: !!process.env.OPENAI_WEBHOOK_SECRET
     }
@@ -237,11 +339,16 @@ app.get('/response/:responseId', async (req: Request, res: Response) => {
     const filename = `${timestamp}-manual-response.json`;
     const filepath = path.join(logsDir, filename);
     
-    fs.writeFileSync(filepath, JSON.stringify({
+    const responseData = {
       response_id: responseId,
       retrieved_at: new Date().toISOString(),
       full_response: response
-    }, null, 2));
+    };
+    
+    fs.writeFileSync(filepath, JSON.stringify(responseData, null, 2));
+    
+    // Parse and save the content
+    const parseResult = parseManualResponse(responseData);
     
     // Save the input items to a separate log file
     const inputItemsFilename = `${timestamp}-input-items.json`;
@@ -264,7 +371,8 @@ app.get('/response/:responseId', async (req: Request, res: Response) => {
       input_items: inputItems.data,
       input_items_count: inputItems.data.length,
       saved_to: filename,
-      input_items_saved_to: inputItemsFilename
+      input_items_saved_to: inputItemsFilename,
+      parsed_content: parseResult
     });
   } catch (error) {
     console.error('Error retrieving response:', error);
@@ -308,6 +416,47 @@ app.post('/response/:responseId/cancel', async (req: Request, res: Response) => 
     res.status(500).json({
       success: false,
       error: 'Failed to cancel response',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+});
+
+// Test endpoint to parse existing log files
+app.post('/parse-log/:filename', async (req: Request, res: Response) => {
+  try {
+    const filename = req.params.filename;
+    const filepath = path.join(logsDir, filename);
+    
+    if (!fs.existsSync(filepath)) {
+      return res.status(404).json({
+        success: false,
+        error: 'File not found',
+        message: `Log file '${filename}' does not exist in logs directory`
+      });
+    }
+    
+    console.log(`Parsing existing log file: ${filename}`);
+    
+    // Read and parse the log file
+    const fileContent = fs.readFileSync(filepath, 'utf8');
+    const responseData = JSON.parse(fileContent);
+    
+    // Parse and save the content
+    const parseResult = parseManualResponse(responseData);
+    
+    res.json({
+      success: true,
+      filename: filename,
+      parsed_content: parseResult,
+      message: parseResult.success 
+        ? `Content parsed and saved to: ${parseResult.filename}`
+        : `Failed to parse content: ${parseResult.error}`
+    });
+  } catch (error) {
+    console.error('Error parsing log file:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Failed to parse log file',
       message: error instanceof Error ? error.message : 'Unknown error'
     });
   }
