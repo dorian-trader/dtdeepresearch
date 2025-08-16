@@ -192,5 +192,33 @@
       "BABA", "JD", "MELI", "SE", "BIRK"
     ],
     "published_date": "2017-05-29"
+  },
+  {
+    "id": "15",
+    "title": "Valuation of Crypto-Currency Mining Operations",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/1802.01176v2.pdf",
+    "categories": ["valuation"],
+    "stocks": [
+      "BMNR", "RIOT", "HUT", "CORZ", "MARA",
+      "CLSK", "CIFR", "BTDR", "IREN", "BITF",
+      "HIVE", "SDIG", "WULF", "BTBT", "BTCM",
+      "GREE", "MIGI", "ANY", "APLD", "ARBK",
+      "DGHI"
+    ],
+    "published_date": "2018-02-04"
+  },
+  {
+    "id": "16",
+    "title": "Bitcoin Mining Meets Wall Street: A Study of Publicly Traded Crypto Mining Companies",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/ssrn-4340013.pdf",
+    "categories": ["competitive-advantage"],
+    "stocks": [
+      "BMNR", "RIOT", "HUT", "CORZ", "MARA",
+      "CLSK", "CIFR", "BTDR", "IREN", "BITF",
+      "HIVE", "SDIG", "WULF", "BTBT", "BTCM",
+      "GREE", "MIGI", "ANY", "APLD", "ARBK",
+      "DGHI"
+    ],
+    "published_date": "2023-09-05"
   }  
 ]
