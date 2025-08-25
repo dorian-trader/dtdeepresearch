@@ -86,7 +86,11 @@
       "JPM", "BAC", "C", "WFC", "GS", "MS", "USB", "PNC", "TD", "SCHW",
       "AXP", "BLK", "SPGI", "AIG", "MET", "CME", "ICE", "BK", "STT",
       "CB", "ZION", "FITB", "HBAN", "KEY", "CFG", "COF", "MTB", "FRC",
-      "TFC", "RF", "PNW", "WELL"
+      "TFC", "RF", "PNW", "WELL",
+      "ALLY", "CMA", "EWBC", "PB", "BOKF", "CFR", "FHN", "UCBI", "WTFC", "FCNCA",
+      "DFS", "V", "MA", "SYF", "SOFI",
+      "PRU", "LNC", "HIG", "ALL", "TRV", "GL", "RGA", "PFG", "UNM",
+      "TROW", "BEN", "AMP", "IVZ", "KKR", "BX", "CG", "APO", "MSCI", "NDAQ"
     ],
     "published_date": "2024-05-10"
   },
@@ -99,7 +103,11 @@
       "JPM", "BAC", "C", "WFC", "GS", "MS", "USB", "PNC", "TD", "SCHW",
       "AXP", "BLK", "SPGI", "AIG", "MET", "CME", "ICE", "BK", "STT",
       "CB", "ZION", "FITB", "HBAN", "KEY", "CFG", "COF", "MTB", "FRC",
-      "TFC", "RF", "PNW", "WELL"
+      "TFC", "RF", "PNW", "WELL",
+      "ALLY", "CMA", "EWBC", "PB", "BOKF", "CFR", "FHN", "UCBI", "WTFC", "FCNCA",
+      "DFS", "V", "MA", "SYF", "SOFI",
+      "PRU", "LNC", "HIG", "ALL", "TRV", "GL", "RGA", "PFG", "UNM",
+      "TROW", "BEN", "AMP", "IVZ", "KKR", "BX", "CG", "APO", "MSCI", "NDAQ"
     ],
     "published_date": "2025-02-15"
   },
