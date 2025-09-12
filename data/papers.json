@@ -236,5 +236,19 @@
       "DGHI"
     ],
     "published_date": "2023-09-05"
-  }  
+  },
+  {
+    "id": "15",
+    "title": "Explaining the Competitive Advantage of Logistics Service Providers (LSPs)",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/Explaining the competitive advantage of logistics service providers A resource-based view approach - WongandKaria2010.pdf",
+    "categories": ["competitive-advantage"],
+    "stocks": [
+      "UPS", "FDX", "XPO", "ODFL", "KNX", "EXPD", "CHRW", "USAK", "SAIA",
+      "HUBG", "ARCB", "WERN", "LSTR", "MATX", "AMZN", "RRD", "RHI",
+      "DHL", "ZTO", "PTON", "TRGP", "INGN", "CVLG", "SNDR", "FWRD",
+      "CHRW", "ODFL"
+    ],
+    "published_date": "2010-09-09"
+}
+
 ]
