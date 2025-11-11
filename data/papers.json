@@ -36,7 +36,8 @@
       "ORCL", "IBM", "ADBE", "SAP", "CSCO", "INTC", "QCOM", "TXN", "AVGO",
       "SNOW", "NOW", "SHOP", "TWLO", "ESTC", "NFLX", "TSLA", "MRNA",
       "LLY", "PFE", "MRK", "ABBV", "JNJ", "GILD", "AMGN", "BMY", "TMO",
-      "ZTS", "DHR", "INTU", "UPS", "RTX", "HON", "PG", "KO", "PEP"
+      "ZTS", "DHR", "INTU", "UPS", "RTX", "HON", "PG", "KO", "PEP",
+      "FDX"
     ],
     "published_date": "2024-03-16"
   },
@@ -238,7 +239,7 @@
     "published_date": "2023-09-05"
   },
   {
-    "id": "15",
+    "id": "17",
     "title": "Explaining the Competitive Advantage of Logistics Service Providers (LSPs)",
     "url": "https://dorian-trader.github.io/dtdeepresearch/Explaining%20the%20competitive%20advantage%20of%20logistics%20service%20providers%20A%20resource-based%20view%20approach%20-%20WongandKaria2010.pdf",
     "categories": ["competitive-advantage"],
@@ -249,6 +250,36 @@
       "CHRW", "ODFL"
     ],
     "published_date": "2010-09-09"
+  },
+  {
+    "id": "18",
+    "title": "The Financial Modeling for Airbus by Free Cash Flow Model",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/IJTEF-V14N2-752-MA3013.pdf",
+    "categories": ["valuation"],
+    "stocks": [
+      "BA", "EADSY", "LMT", "NOC", "GD",
+      "RTX", "HII", "TDG", "HEI", "TXT",
+      "SPR", "ERJ", "RYCEY", "SAFRY", "BAESY",
+      "FINMY", "CAE", "TDY", "MOG.A", "AVAV",
+      "HXL", "ATI", "HON", "GE", "LHX",
+      "CW", "ESLT"
+    ],
+    "published_date": "2022-08-08"
+  },
+  {
+    "id": "19",
+    "title": "Analysing the Airbus–Boeing Duopoly: Financial Ratios, DCF Valuation, and Strategic Implications for the Aerospace Industry",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/ssrn-5485507.pdf",
+    "categories": ["competitive-advantage"],
+    "stocks": [
+      "BA", "EADSY", "LMT", "NOC", "GD",
+      "RTX", "HII", "TDG", "HEI", "TXT",
+      "SPR", "ERJ", "RYCEY", "SAFRY", "BAESY",
+      "FINMY", "CAE", "TDY", "MOG.A", "AVAV",
+      "HXL", "ATI", "HON", "GE", "LHX",
+      "CW", "ESLT"
+    ],
+    "published_date": "2025-04-16"
 }
 
 ]
