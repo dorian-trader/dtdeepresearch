@@ -280,6 +280,32 @@
       "CW", "ESLT"
     ],
     "published_date": "2025-04-16"
-}
-
+  },
+  {
+    "id": "20",
+    "title": "Valuing Young, Start-up and Growth Companies: Estimation Issues and Valuation Challenges",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/younggrowth.pdf",
+    "categories": ["valuation"],
+    "stocks": [
+      "IONQ", "RGTI", "QBTS", "QUBT", "ARQQ", "INFQ", "XNDU", "QNT",
+      "IQMX", "BTQ", "HQ", "QSI",
+      "PLTR", "SNOW", "PATH", "AI", "SOFI", "UPST", "AFRM", "HOOD",
+      "COIN", "ROKU", "SNAP", "RBLX", "NET", "DDOG", "CRWD", "ZS",
+      "MDB", "BILL", "TOST", "DUOL", "APP", "SMCI", "U", "ESTC"
+    ],
+    "published_date": "2009-06-12"
+  },
+  {
+    "id": "21",
+    "title": "The emerging commercial landscape of quantum computing",
+    "url": "https://dorian-trader.github.io/dtdeepresearch/2202.12733v1.pdf",
+    "categories": ["competitive-advantage"],
+    "stocks": [
+      "IONQ", "RGTI", "QBTS", "QUBT", "ARQQ", "INFQ", "XNDU", "QNT",
+      "IQMX", "BTQ", "HQ", "QSI",
+      "IBM", "MSFT", "AMZN", "GOOG", "GOOGL", "NVDA", "INTC", "HON",
+      "AMD", "ORCL", "TSM", "AVGO", "FJTSY", "ACN", "CRM", "SNOW"
+    ],
+    "published_date": "2022-02-10"
+  }
 ]
