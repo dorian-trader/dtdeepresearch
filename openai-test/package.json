@@ -4,11 +4,13 @@
   "description": "Test script to verify OpenAI API key functionality",
   "main": "test.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "list-models": "node list-models.js",
+    "support-responses-test": "node support-responses-test.js"
   },
   "dependencies": {
-    "openai": "^4.28.0",
-    "dotenv": "^16.4.1"
+    "dotenv": "^16.4.1",
+    "openai": "^7.4.0"
   },
   "type": "module"
-} 
+}

@@ -10,6 +10,9 @@ const __dirname = path.dirname(__filename);
 // Load environment variables from root level .env file
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
+// console.log(process.env.OPENAI_API_KEY?.slice(0, 12));
+// console.log(process.env.OPENAI_PROJECT_ID);
+
 // Import the existing functions
 import { pickRandomStockWithCategoryVariety, selectPapersFromDifferentCategories } from '../data/paper-utils/dist/selector.js';
 import { loadPapers } from '../data/paper-utils/dist/loader.js';
@@ -17,9 +20,22 @@ import { loadPapers } from '../data/paper-utils/dist/loader.js';
 // Initialize OpenAI client
 const openai = new OpenAI({ 
     apiKey: process.env.OPENAI_API_KEY,
-    timeout: 3600 * 1000 
+    timeout: 3600 * 1000,
+    fetch: async (url, init) => {
+        console.log("URL:", String(url));
+      
+        const response = await fetch(url, init);
+        console.log("STATUS:", response.status);
+      
+        if (!response.ok) {
+          console.log("BODY:", await response.clone().text());
+        }
+      
+        return response;
+    }
 });
 
+console.log(openai.baseURL);
 
 
 // Load and process the prompt template
@@ -58,13 +74,13 @@ async function sendToDeepResearch(prompt, metadata) {
         console.log('\nSending to ChatGPT Deep Research...');
         
         const response = await openai.responses.create({
-            model: "o3-deep-research",
-            //model: "o4-mini-deep-research",
+            model: "gpt-5.5",
+            reasoning: { effort: "high" }, // or "xhigh"
             input: prompt,
             background: true,
             metadata,
             tools: [
-                { type: "web_search_preview" },
+                { type: "web_search" },
             ],
         });
         
